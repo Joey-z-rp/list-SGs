@@ -1,0 +1,20 @@
+service: list-sgs
+
+plugins:
+  - serverless-plugin-typescript
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: ap-southeast-2
+  lambdaHashingVersion: '20201221'
+
+functions:
+  getSecurityGroups:
+    handler: src/lambda-handlers/get-security-groups.getAllSecurityGroups
+    events:
+      - http:
+          path: security-groups
+          method: get

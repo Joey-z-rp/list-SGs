@@ -1,0 +1,8 @@
+# build artifects
+.build
+
+# Serverless directories
+.serverless
+
+# package directories
+node_modules

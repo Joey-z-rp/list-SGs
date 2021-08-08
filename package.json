@@ -1,0 +1,23 @@
+{
+  "name": "list-sgs",
+  "version": "0.1.0",
+  "scripts": {
+    "lint": "eslint . && prettier --check .",
+    "lint:fix": "eslint . --fix && prettier --write .",
+    "deploy": "sls deploy"
+  },
+  "devDependencies": {
+    "@babel/core": "7.15.0",
+    "@babel/preset-env": "7.15.0",
+    "@babel/preset-typescript": "7.15.0",
+    "@typescript-eslint/eslint-plugin": "4.29.0",
+    "@typescript-eslint/parser": "4.29.0",
+    "babel-jest": "27.0.6",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "prettier": "2.3.2",
+    "serverless": "2.53.1",
+    "serverless-plugin-typescript": "1.1.9",
+    "typescript": "4.3.5"
+  }
+}
