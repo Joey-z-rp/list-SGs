@@ -10,6 +10,14 @@ provider:
   runtime: nodejs14.x
   region: ap-southeast-2
   lambdaHashingVersion: '20201221'
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - ec2:DescribeRegions
+            - ec2:DescribeSecurityGroups
+          Resource: '*'
 
 functions:
   getSecurityGroups:

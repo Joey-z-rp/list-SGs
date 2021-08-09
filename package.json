@@ -6,6 +6,9 @@
     "lint:fix": "eslint . --fix && prettier --write .",
     "deploy": "sls deploy"
   },
+  "dependencies": {
+    "humps": "2.0.1"
+  },
   "devDependencies": {
     "@babel/core": "7.15.0",
     "@babel/preset-env": "7.15.0",
