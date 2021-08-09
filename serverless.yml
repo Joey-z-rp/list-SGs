@@ -22,6 +22,7 @@ provider:
 functions:
   getSecurityGroups:
     handler: src/lambda-handlers/get-security-groups.getAllSecurityGroups
+    memorySize: 512
     events:
       - http:
           path: security-groups
@@ -34,5 +35,6 @@ functions:
 
   authorizeRequest:
     handler: src/authorizers/authorize-request.authorizeRequest
+    memorySize: 256
     environment:
       AUTH_TOKEN: ${env:AUTH_TOKEN}

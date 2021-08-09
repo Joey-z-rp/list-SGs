@@ -4,9 +4,12 @@
   "scripts": {
     "lint": "eslint . && prettier --check .",
     "lint:fix": "eslint . --fix && prettier --write .",
+    "test": "jest",
+    "test:coverage": "jest --collect-coverage",
     "deploy": "sls deploy"
   },
   "dependencies": {
+    "aws-sdk": "2.963.0",
     "humps": "2.0.1"
   },
   "devDependencies": {
@@ -14,11 +17,13 @@
     "@babel/preset-env": "7.15.0",
     "@babel/preset-typescript": "7.15.0",
     "@types/aws-lambda": "8.10.81",
+    "@types/jest": "26.0.24",
     "@typescript-eslint/eslint-plugin": "4.29.0",
     "@typescript-eslint/parser": "4.29.0",
     "babel-jest": "27.0.6",
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.3.0",
+    "jest": "27.0.6",
     "prettier": "2.3.2",
     "serverless": "2.53.1",
     "serverless-plugin-typescript": "1.1.9",
