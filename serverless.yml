@@ -18,3 +18,13 @@ functions:
       - http:
           path: security-groups
           method: get
+          authorizer:
+            name: authorizeRequest
+            resultTtlInSeconds: 60
+            identitySource: method.request.header.Authorization
+            type: token
+
+  authorizeRequest:
+    handler: src/authorizers/authorize-request.authorizeRequest
+    environment:
+      AUTH_TOKEN: ${env:AUTH_TOKEN}
